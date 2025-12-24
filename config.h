@@ -17,16 +17,9 @@
 #define TRAILING_DELIMITER 0
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
-#define BLOCKS(X)             \
-    X("", "sb-mail", 600, 1)  \
-    X("", "sb-music", 0, 2)   \
-    X("", "sb-disk", 1800, 3) \
-    X("", "sb-memory", 10, 4) \
-    X("", "sb-loadavg", 5, 5) \
-    X("", "sb-mic", 0, 6)     \
-    X("", "sb-record", 0, 7)  \
-    X("", "sb-volume", 0, 8)  \
-    X("", "sb-battery", 5, 9) \
-    X("", "sb-date", 1, 10)
+
+// X(ICON, CMD, update_interval, update_signal
+#define BLOCKS(X) \
+    X("", "$CONFIGROOT/../DEPS/scripts/shell/volume --get ", 0 ,5)
 
 #endif  // CONFIG_H
