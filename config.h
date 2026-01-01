@@ -21,6 +21,6 @@
 // X(ICON, CMD, update_interval, update_signal
 #define BLOCKS(X) \
     X("󰕾 ", "echo : $($CONFIGROOT/../DEPS/scripts/shell/volume --get)", 0 ,5) \
-    X("󱍖 ","echo : $($CONFIGROOT/../DEPS/scripts/shell/backlight --get)%", 0 ,6)
+    X("󱍖 ","echo : $($CONFIGROOT/../DEPS/scripts/shell/backlight --get)", 0 ,6)
 
 #endif  // CONFIG_H
