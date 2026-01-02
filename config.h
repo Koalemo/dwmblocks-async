@@ -11,16 +11,17 @@
 #define CLICKABLE_BLOCKS 0
 
 // Control whether a leading delimiter should be prepended to the status.
-#define LEADING_DELIMITER 0
+#define LEADING_DELIMITER 1
 
 // Control whether a trailing delimiter should be appended to the status.
-#define TRAILING_DELIMITER 0
+#define TRAILING_DELIMITER 1
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 
 // X(ICON, CMD, update_interval, update_signal
 #define BLOCKS(X) \
     X("󰕾 ", "echo : $($CONFIGROOT/../DEPS/scripts/shell/volume --get)", 0 ,5) \
-    X("󱍖 ","echo : $($CONFIGROOT/../DEPS/scripts/shell/backlight --get)", 0 ,6)
+    X("󱍖 ","echo : $($CONFIGROOT/../DEPS/scripts/shell/backlight --get)", 0 ,6) \
+    X(" ", "echo : $(date '+%b %d (%a) %I:%M%p')", 30, 1)
 
 #endif  // CONFIG_H
