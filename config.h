@@ -22,6 +22,7 @@
 #define BLOCKS(X) \
     X("󰕾 ", "echo : $($CONFIGROOT/../DEPS/scripts/shell/volume --get)", 0 ,5) \
     X("󱍖 ","echo : $($CONFIGROOT/../DEPS/scripts/shell/backlight --get)", 0 ,6) \
+    X("󱊢", "echo : $($CONFIGROOT/../DEPS/scripts/shell/battery --get)", 30, 2) \
     X(" ", "echo : $(date '+%b %d (%a) %I:%M%p')", 30, 1)
 
 #endif  // CONFIG_H
